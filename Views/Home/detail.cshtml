@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "detail";
+}
+
+
+
+
+<p>@ViewBag.Company</p>
+
+<div class="main">
+    
+<div class="content_left">
+    <img src="~/image/success.jpg" alt="image07">
+		
+            <div class="search1">
+           <form method="post" action="~/Account/logout"  >
+       <input type="submit" value="Logout" name="Logout" class="submit">
+           </form>
+               </div>
+
+		<div class="text1-nav">
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+		<!-- start content_right -->
+   <div class="content_right">
+
+			 <h1>You Searched Item Is : @ViewBag.cid</h1>
+      
+			 	
+							
+					                            
+								<a href="#image-1">
+									<img src="~/image/@ViewBag.image" alt="">
+                                   
+									<span> </span>
+								</a>
+
+                             
+							
+                                	<div class="lb-overlay" id="image-1">
+									<img src="~/image/@ViewBag.image" width="650" height="450" alt="">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							
+                            <h1>Car Model Is @ViewBag.model</h1>
+                            <h1> Price is: @ViewBag.price</h1>
+							       <a href="~/Account/WishListMethod?id=@ViewBag.cid"  style="color:green"><input type="button" value="Add To Wish List" class="byn btn-danger"  onclick="return confirm('Are you sure you want to Add To Wish List?');"></a>
+                                <a href="~/Account/BuyNow?id=@ViewBag.cid"><input type="button" value="Buy Now" class="btn btn-primary btn-lg" onclick="return confirm('Are you sure you want to Buy This?')"></a>
+						
+								
+						
+                                <div class="clear"></div>
+					
+		       <br>
+       
+       </div>
+	
+    <div class="clear"></div>
+    <!--Right code would be here -->
+    
+    </div>
+

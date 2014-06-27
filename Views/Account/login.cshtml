@@ -1,0 +1,51 @@
+﻿
+@model bitf11m016Demo.Models.User
+@{
+    ViewBag.Title = "Userlogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+
+<div class="main">
+<div class="content_left">
+    <img src="~/image/login.jpg" alt="image07">
+    <div class="text1-nav">
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+		<!-- start content_right -->
+   <div class="content_right">
+        <div class="search1">
+       @using (Html.BeginForm("logincheck", "Account", FormMethod.Post))
+       {
+            @Html.AntiForgeryToken()
+                      @Html.ValidationSummary(true)
+                    
+           <Label>User Id</Label>
+           @Html.TextBoxFor(m => m.Usedname, new {@required="required"});
+           @Html.ValidationMessageFor(m => m.Usedname);
+           <Label>Admin Password</Label>
+           @Html.TextBoxFor(m => m.pwd, new  {@required="required",type="password"});
+           @Html.ValidationMessageFor(m => m.pwd);
+           <input type="submit" value="Login" class="submit">
+       }
+             <a href="~/Account/Signup"><span>SignUp Now</span></a>
+       </div>
+       </div>
+	
+    <div class="clear"></div>
+    <!--Right code would be here -->
+    
+    </div>
+
+@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")

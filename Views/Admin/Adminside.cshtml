@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Adminside";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="main">
+
+@{
+if(@Session["n"]!=null)
+{
+    <h1> Hello: @(Session["n"].ToString())</h1>
+}
+}
+     <div class="content_left">
+    <img src="~/image/adminlogo.jpg" alt="image07">
+		@* <div class="search">
+				 	<h2>search</h2>
+    		<form>
+    			<input type="text" value="" placeholder="Enter Your search...">
+    			<input type="submit" value="">
+    		</form>
+		</div>
+        *@
+         <div class="search1">
+           <form method="post" action="~/Account/logout"  >
+       <input type="submit" value="Logout" name="Logout" class="submit">
+           </form>
+               </div>
+		<div class="text1-nav">
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+		<!-- start content_right -->
+   <div class="content_right">
+			 <div class="gallery">
+			 	<h2>Admin Pannel</h2>
+							<section>
+						<ul class="lb-album">
+							<li>
+								<a href="#image-1">
+									<img src="~/image/addlogo.gif" alt="">
+                                    
+
+									<span> </span>
+								</a>
+                              <a  type="button" class="btn btn-success btn-lg"href="~/Admin/Addcar">Add New Car</a>
+								<div class="lb-overlay" id="image-1">
+									<img src="~/image/addlogo.gif" alt="">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+							<li>
+								<a href="#image-2">
+									<img src="~/image/showlogo.jpg" alt="">
+                                    
+									<span> </span>
+								</a>
+                                      <a  type="button" class="btn btn-success btn-lg"href="~/Admin/showcars">All Cars In Show Room</a>
+								<div class="lb-overlay" id="image-2">
+							<img src="~/image/showlogo.jpg" alt=""> 
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+							<li>
+								<a href="#image-3">
+									<img src="~/image/deletelogo.gif" alt="">
+                                  
+									<span> </span>
+								</a>
+                                    <a  type="button" class="btn btn-success btn-lg"href="~/Admin/Deletecar">Delete From Stock</a>
+								<div class="lb-overlay" id="image-3">
+									<img src="~/image/updatelogo.gif" alt="image03">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+                            <li>
+								<a href="#image-4">
+                                    		<img src="~/image/updatelogo.gif" alt="">
+									
+                                  
+									<span> </span>
+								</a>
+                                    <a  type="button" class="btn btn-success btn-lg"href="~/Admin/showcarsupdate">Update Car From Stock</a>
+								<div class="lb-overlay" id="image-4">
+									<img src="~/image/updatelogo.gif" alt="">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+							
+								
+						</ul>
+                                <div class="clear"></div>
+					</section>
+					</div>
+           
+
+       </div>
+	
+    <div class="clear"></div>
+    <!--Right code would be here -->
+    
+    </div>
+

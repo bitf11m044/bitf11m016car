@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "mercedes";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<div class="main">
+<div class="content_left">
+    <img src="~/image/mercedeslogo.png" alt="image07">
+		@* <div class="search">
+				 	<h2>search</h2>
+    		<form>
+    			<input type="text" value="" placeholder="Enter Your search...">
+    			<input type="submit" value="">
+    		</form>
+		</div>*@
+		<div class="text1-nav">
+		
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+		<!-- start content_right -->
+    <div class="content_right">
+			 <div class="gallery">
+			 	<h2>Our latest gallery</h2>
+							<section>
+						<ul class="lb-album">
+                            @foreach(var item in Model)
+                            {
+							<li>
+								<a href="#image-1">
+									<img src="~/image/@item.image" alt=""><p>@item.model @item.price pkr</p>
+
+								
+                                    	<span> </span>
+								</a>
+                              <a href="~/Account/WishListMethod?id=@item.cid" style="color:green"><input type="button" value="Add to Wish List" class="byn btn-danger"  onclick="return confirm('Are you sure you want to Add To Wish List?');"></a>
+
+					<a  type="button" class="btn btn-primary btn-lg"href="~/Account/BuyNow?id=@item.cid">Buy Now </a>
+							
+                                	
+                                			<div class="lb-overlay" id="image-1">
+									<img src="~/image/@item.image" width="650" height="450" alt="">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+                            }
+								<div class="clear"></div>
+						</ul>
+					</section>
+					</div>
+       </div>    <!--Right code would be here -->
+    <div class="clear"></div>
+    </div>

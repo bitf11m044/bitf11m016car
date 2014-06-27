@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Addcar";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+<div class="main">
+    
+<div class="content_left">
+		@* <div class="search">
+				 	<h2>search</h2>
+    		<form>
+    			<input type="text" value="" placeholder="Enter Your search...">
+    			<input type="submit" value="">
+    		</form>
+		</div>
+        *@
+    <img src="~/image/adminlogo.jpg" alt="image07">
+		<div class="text1-nav">
+		
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+		<!-- start content_right -->
+    <div class="content_right">
+         <div class="search1">
+	 	 	<h2>Add A Car</h2>
+			<form method="post" action="/Admin/saveimage/" enctype = "multipart/form-data">
+		<label>Car Id:</label>
+				<input type="text" name="cid" />
+			
+			<label>Model Name:</label>
+				<input type="text" name="model"  />
+                <label>Company Name:</label>
+				<input type="text" name="name" />
+			
+           <label>Price:</label>
+				<input type="text" name="price" />
+           <label>Adding Date:</label>
+                <input type="text" name="adding" />
+                <label> Picture (275X 183 px):</label>
+                
+    Upload Image: <input type="file" name="image" />
+ 
+     
+
+  		
+
+				
+      		<input type="submit" value="Submit" name="submit" class="submit" />
+	     </form>	
+               
+ 
+      	</div>
+        
+        
+        </div>
+    <div class="clear"></div>
+    </div>
+

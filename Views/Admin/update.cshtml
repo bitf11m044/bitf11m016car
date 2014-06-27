@@ -1,0 +1,99 @@
+﻿
+@model bitf11m016Demo.Models.Car
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+   
+    
+}
+
+
+
+
+ <div class="main">
+     
+<div class="content_left">
+    <img src="~/image/searchlogo.jpg" alt="image09">
+		@* <div class="search">
+				 	<h2>search</h2>
+    		<form>
+    			<input type="text" value="" placeholder="Enter Your search...">
+    			<input type="submit" value="" >
+    		</form>
+		</div>
+        *@
+		<div class="text1-nav">
+		
+		<ul>
+			<li class="active"><a href="~/Product/nissan">Nissan </a></li>
+			<li><a href="~/Product/bmw">BMW & MINI</a></li>
+			<li><a href="~/Product/ford">Ford Collection</a></li>
+			<li><a href="~/Product/suzuki">Suzuki Collection</a></li>
+			<li><a href="~/Product/toyota">Toyata Collection</a></li>
+			<li><a href="~/Product/mercedes">Mercedes-Benz</a></li>
+	    </ul>
+	</div>
+    <div class="clear"></div>
+    </div>
+     
+		<!-- start content_right -->
+   <div class="content_right">
+					<ul class="lb-album">
+             							<li>
+								<a href="#image-1">
+									<img src="~/image/@Model.image" alt="">
+                                    
+
+									<span> </span>
+								</a>
+       
+								<div class="lb-overlay" id="image-1">
+									<img src="~/image/@Model.image" width="650" height="450" alt="">
+									<a href="#page" class="lb-close"> </a>
+								</div>
+							</li>
+                            
+							
+								
+						</ul>
+                                <div class="clear"></div>
+	   
+       <div class="search1">
+ 
+       <form method="post" action="~/Admin/doupdate"@* enctype = "multipart/form-data"*@>
+		<label>Car Id:</label>
+				<input type="text" name="cid"  value="@Model.cid" />
+			
+			<label>Model Name:</label>
+				<input type="text" name="model"  value="@Model.model"/>
+                <label>Company Name:</label>
+				<input type="text" name="name"  value="@Model.company"/>
+			
+           <label>Price:</label>
+				<input type="text" name="p" value="@Model.price"/>
+           <label>Adding Date:</label>
+           	<input type="text" name="date" value="@Model.addingdate"/>
+                  
+
+  		
+
+				
+      		<input type="submit" value="Submit" name="submit" class="submit"  onclick="return confirm('Are you sure you want to Update?');"/>
+	     </form>	
+              
+       
+       
+       
+        
+ 
+       </div>
+      </div>
+    <!--Right code would be here -->
+    <div class="clear"></div>
+     </div>
+</div>     
+        
+
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7d6904ef74f47838a20caa72002866e" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="3.8072336426969775" PointY="24.70320541816913" />
+        <EntityTypeShape EntityType="Database1Model.Admin" Width="1.5" PointX="8.375" PointY="25.625" />
+        <EntityTypeShape EntityType="Database1Model.Car" Width="1.5" PointX="0.81263402887277025" PointY="15.855833776228053" />
+        <EntityTypeShape EntityType="Database1Model.wlist" Width="1.5" PointX="10.361798956227394" PointY="1.4367982751861206" />
+        <AssociationConnector Association="Database1Model.Cid" />
+        <AssociationConnector Association="Database1Model.Uid" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
